@@ -1,10 +1,11 @@
 # Add Exif data to your image file names
 
-This little Python script will add certain Exif data (aperture, focal length and camera model) to the image file name.
+This little Python script will add certain Exif data (focal length, aperture, ISO and camera model) to the image file name.
 
 ## Examples
 
 _DSC0508.jpg &rarr; 28mm-f5-ISO100-ILCE-7M3-_DSC0508.jpg
+
 _DSC0033.jpg &rarr; 283mm-f6.3-ISO400-ILCE-7M3-_DSC0033.jpg
 
 
