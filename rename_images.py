@@ -1,7 +1,7 @@
 import os
 from PIL import Image, ExifTags
 
-path = (r"<your directory>")
+path = (r"<Your directory path>")
 
 def get_approx_aperture(value):
   valid_apertures = [1.0, 1.1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.5, 2.8, 3.2, 3.5, 4, 4.5, 5, 5.6, 6.3, 7.1, 8, 9, 10, 11, 13, 14, 16, 18, 20, 22, 25, 29, 32, 36, 40]
@@ -23,7 +23,7 @@ def rename_images():
       focal_length = round(exif["FocalLength"], 0)
       camera = exif["Model"]
       ISO = exif["ISOSpeedRatings"]
-      new_filename = f"{focal_length}mm-f{aperture}-ISO{ISO}-{camera}-{file}"
+      new_filename = f"{camera}-{focal_length}mm-f{aperture}-ISO{ISO}-{file}"
       src = os.path.join(path, file)
       dst = os.path.join(path, new_filename)
       os.rename(src, dst)
